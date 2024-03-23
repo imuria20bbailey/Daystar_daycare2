@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="assets/bootstrap-5.0.2-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/fontawesome-free-5.15.4-web/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/fontawesome-free-5.15.4-web/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <title>DayStar Daycare</title>
 </head>
 <body>
@@ -13,71 +15,59 @@
         <div class="row flex-nowrap">
             <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0" style="background-image: linear-gradient(to bottom right, rgb(63, 10, 3), rgb(33, 2, 39))">
                 <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-                    <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                        <span class="fs-5 d-none d-sm-inline">Menu</span>
-                    </a>
+                    <div style="border-bottom: 2px solid #fff; margin-bottom: 20px;">
+                        <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                            <span class="d-none d-sm-inline" style="font-size: 18px; font-weight: bold;">DAYSTAR DAYCARE</span>
+                        </a>
+                    </div>
                     <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
                         <li class="nav-item">
-                            <a href="#" class="nav-link align-middle px-0">
+                            <a href="index.html" class="nav-link align-middle px-0">
                                 <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
                             </a>
                         </li>
                         <li>
                             <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Dashboard</span> </a>
+                                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Sitter Management</span> </a>
                             <ul class="collapse nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
                                 <li class="w-100">
-                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 1 </a>
+                                    <a href="sitters-registration.html" class="nav-link px-0"> <span class="d-none d-sm-inline"></span>Sitters</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 2 </a>
+                                    <a href="sitters-management.html" class="nav-link px-0"> <span class="d-none d-sm-inline"></span>Sitter Management</a>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Sitters</span></a>
+                            <a href="baby-registration.html" class="nav-link px-0 align-middle ">
+                                <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">Baby Management</span>
+                            </a>
                         </li>
                         <li>
-                            <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
-                                <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">Babies</span></a>
-                            <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
+                            <a href="expenses.html" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-wallet"></i> <span class="ms-1 d-none d-sm-inline">Expense Management</span> 
+                            </a>
+                            <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
                                 <li class="w-100">
-                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 1</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 2</a>
+                                    <a href="expenses.html" class="nav-link px-0"> <span class="d-none d-sm-inline"></span>Expenses</a>
                                 </li>
                             </ul>
                         </li>
                         <li>
                             <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Expense Management</span> </a>
-                                <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
+                                <i class="fs-4 bi-cart"></i> <span class="ms-1 d-none d-sm-inline">Purchase Management</span> 
+                            </a>
+                            <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
                                 <li class="w-100">
-                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 1</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 2</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 3</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 4</a>
+                                    <a href="purchases.html" class="nav-link px-0"> <span class="d-none d-sm-inline"></span>Purchases</a>
                                 </li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="#" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Purchase Management</span> </a>
-                        </li>
                     </ul>
-                    <hr>
                     <div class="dropdown pb-4">
                         <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
-                            <span class="d-none d-sm-inline mx-1">loser</span>
+                            <img src="profile.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
+                            <span class="d-none d-sm-inline mx-1">Administrator</span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
                             <li><a class="dropdown-item" href="#">New project...</a></li>
@@ -86,7 +76,7 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">Sign out</a></li>
+                            <li><a class="dropdown-item" href="login.html">Sign out</a></li>
                         </ul>
                     </div>
                 </div>
@@ -97,48 +87,59 @@
                         <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
+                                    <h5 class="modal-title" id="exampleModalToggleLabel">Sitters</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <div class="row">
-                                        <div class="col-12 mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label">Name</label>
-                                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                    <form id="register-sitter-form">
+                                        <div class="row">
+                                            <div class="col-12 col-lg-6 mb-3">
+                                                <label for="name" class="form-label">Name</label>
+                                                <input type="text" class="form-control" id="name">
+                                            </div>
+                                            <div class="col-12 col-lg-6 mb-3">
+                                                <label for="location" class="form-label">Location</label>
+                                                <input type="text" class="form-control" id="location">
+                                            </div>
+                                            <div class="col-12 col-lg-6 mb-3">
+                                                <label for="date_of_birth" class="form-label">Date of Birth</label>
+                                                <input type="text" class="form-control" id="date_of_birth">
+                                            </div>
+                                            <div class="col-12 col-lg-6 mb-3">
+                                                <label for="next_of_kin" class="form-label">Next of Kin</label>
+                                                <input type="text" class="form-control" id="next_of_kin">
+                                            </div>
+                                            <div class="col-12 col-lg-6 mb-3">
+                                                <label for="nin" class="form-label">NIN</label>
+                                                <input type="text" class="form-control" id="nin">
+                                            </div>
+                                            <div class="col-12 col-lg-6 mb-3">
+                                                <label for="name_of_recommender" class="form-label">Recommender's Name</label>
+                                                <input type="text" class="form-control" id="name_of_recommender">
+                                            </div>
+                                            <div class="col-12 col-lg-6 mb-3">
+                                                <label for="religion" class="form-label">Religion</label>
+                                                <input type="text" class="form-control" id="religion">
+                                            </div>
+                                            <div class="col-12 col-lg-6 mb-3">
+                                                <label for="level_of_education" class="form-label">Level of Education</label>
+                                                <input type="text" class="form-control" id="level_of_education">
+                                            </div>
+                                          
+                                            <div class="col-12 col-lg-6 mb-3">
+                                                <div>
+                                                    <label for="cleave-phone" class="form-label">Phone Number</label>
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <div class="input-group-text">+256</div>
+                                                        </div>
+                                                        <input type="text" class="form-control numbers" id="cleave-phone" name="phone_number" autocomplete="off" placeholder="xxx xxx xxx" maxlength="11" >
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="col-12 mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label">Location</label>
-                                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                                        </div>
-                                        <div class="col-12 mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label">Date of Birth</label>
-                                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                                        </div>
-                                        <div class="col-12 mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label">Next of Kin</label>
-                                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                                        </div>
-                                        <div class="col-12 mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label">NIN</label>
-                                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                                        </div>
-                                        <div class="col-12 mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label">Recommender's Name</label>
-                                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                                        </div>
-                                        <div class="col-12 mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label">Religion</label>
-                                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                                        </div>
-                                        <div class="col-12 mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label">Level of Education</label>
-                                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                                        </div>
-                                        <div class="col-12 mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label">Phone Number</label>
-                                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                                        </div>
-                                    </div>
+                                    </form>
+                                   
                                 </div>
                                 <div class="modal-footer">
                                     <button class="btn btn-success" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Register Sitter</button>
@@ -146,7 +147,67 @@
                             </div>
                         </div>
                     </div>
-                    <a class="btn btn-warning mt-4 mb-4" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Register Sitter</a>
+                    <a class="btn btn-warning mt-4 mb-4" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Register a Sitter</a>
+
+
+                    <div class="modal fade" id="editSitter" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalToggleLabel">Sitters</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-12 col-lg-6 mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Name</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput1">
+                                        </div>
+                                        <div class="col-12 col-lg-6 mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Location</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput1">
+                                        </div>
+                                        <div class="col-12 col-lg-6 mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Date of Birth</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput1">
+                                        </div>
+                                        <div class="col-12 col-lg-6 mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Next of Kin</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput1">
+                                        </div>
+                                        <div class="col-12 col-lg-6 mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">NIN</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput1">
+                                        </div>
+                                        <div class="col-12 col-lg-6 mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Recommender's Name</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput1">
+                                        </div>
+                                        <div class="col-12 col-lg-6 mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Religion</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput1">
+                                        </div>
+                                        <div class="col-12 col-lg-6 mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Level of Education</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput1">
+                                        </div>
+                                        <div class="col-12 col-lg-6 mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Phone Number</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput1">
+                                        </div>
+                                        <div class="col-12 col-lg-6 mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Status</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput1">
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-success" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Edit</button>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="row">
                         <div class="col-12 mb-3">
@@ -154,28 +215,59 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">First</th>
-                                        <th scope="col">Last</th>
-                                        <th scope="col">Handle</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Location</th>
+                                        <th scope="col">Date of Birth</th>
+                                        <th scope="col">Next of Kin</th>
+                                        <th scope="col">NIN</th>
+                                        <th scope="col">Recommender's Name</th>
+                                        <th scope="col">Religion</th>
+                                        <th scope="col">Level of Education</th>
+                                        <th scope="col">Phone Number</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
+                                        <td>Jane Doe</td>
+                                        <td>Kampala</td>
+                                        <td>12/09/1995</td>
+                                        <td>John Doe</td>
+                                        <td>CF0000000000</td>
+                                        <td></td>
+                                        <td>Protestant</td>
+                                        <td>Diploma</td>
+                                        <td>256000000001</td>
+                                        <td>
+                                            <a href="#">
+                                                <i class="fas fa-pen" style="color: #210227;"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fas fa-trash-alt" style="color: #b20d01;"></i>
+                                            </a>
+                                        </td>
                                     </tr>
+                                    
                                     <tr>
                                         <th scope="row">2</th>
-                                        <td>Jacob</td>
-                                        <td>Thornton</td>
-                                        <td>@fat</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td colspan="2">Larry the Bird</td>
-                                        <td>@twitter</td>
+                                        <td>John Doe</td>
+                                        <td>Kampala</td>
+                                        <td>12/09/1995</td>
+                                        <td>Jane Doe</td>
+                                        <td>CM0000000000</td>
+                                        <td></td>
+                                        <td>Protestant</td>
+                                        <td>Diploma</td>
+                                        <td>256000000002</td>
+                                        <td>
+                                            <a href="#editSitter" data-bs-toggle="modal">
+                                                <i class="fas fa-pen" style="color: #210227;"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fas fa-trash-alt" style="color: #b20d01;"></i>
+                                            </a>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -185,6 +277,60 @@
             </div>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/additional-methods.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="assets/fontawesome-free-5.15.4-web/js/all.js"></script>
+    <script> 
+
+        $(document).ready(function() {
+     
+            /////////////////// INPUT KEY//////////////////////////////////////////////////
+            $('input.numbers').keyup(function(event) {
+                if(event.which >= 37 && event.which <= 40) return;
+                $(this).val(function(index, value) {
+                    return value
+                    .replace(/\D/g, "")
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, "");
+                });
+            });
+        
+
+
+            document.getElementById("register-sitter-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Retrieve form data
+            var formData = {
+                name: document.getElementById("name").value,
+                location: document.getElementById("location").value,
+                dob: document.getElementById("date-of_birth").value,
+                nextOfKin: document.getElementById("next_of_kin").value,
+                nin: document.getElementById("nin").value,
+                recommenderName: document.getElementById("name_of_recommender").value,
+                religion: document.getElementById("religion").value,
+                educationLevel: document.getElementById("level_of_education").value,
+                phoneNumber: document.getElementById("phoneNumber").value
+            };
+
+            // Send form data to backend
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "/register-sitter", true); // Assuming your registration endpoint is '/users/register'
+            xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 201) {
+                        alert("User registered successfully");
+                        // Clear form fields or do any additional actions
+                    } else {
+                        alert("Error: " + xhr.statusText);
+                    }
+                }
+            };
+            xhr.send(JSON.stringify(formData));
+        });
+        });
+        </script>s
 </body>
 </html>
