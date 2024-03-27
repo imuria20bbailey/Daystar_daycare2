@@ -34,25 +34,6 @@
     <script src="assets/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
     <script src="assets/fontawesome-free-5.15.4-web/js/all.js"></script>
 
-    <script>
-        function validate() {
-            var username = document.getElementById("username").value;
-            var password = document.getElementById("password").value;
-            if (username == "Admin" && password == "Password#123") {
-                window.location = "index.html"; // Redirecting to other page.
-                return false;
-            } else {
-                attempt--; // Decrementing by one.
-                alert("You have left " + attempt + " attempt;");
-                // Disabling fields after 3 attempts.
-                if (attempt == 0) {
-                    document.getElementById("username").disabled = true;
-                    document.getElementById("password").disabled = true;
-                    document.getElementById("submit").disabled = true;
-                    return false;
-                }
-            }
-        }
-    </script>
+    <script src="./dash.js"></script>
 </body>
 </html>
