@@ -1,4 +1,19 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: #CADCFC;
+}
+.card-body {
+    background-color: #fff; box-shadow: 0 4px 8px 0 rgba(250, 248, 248, 0.2), 0 6px 20px 0 rgba(154, 149, 149, 0.19);
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.form {
+    margin-top: 150px;
+    text-align: center;
+}
+
+.admin{
+    padding-bottom: 10px;
 }

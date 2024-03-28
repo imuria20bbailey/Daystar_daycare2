@@ -1,21 +1,49 @@
-function validate() {
+// function validate() {
+//     var username = document.getElementById("username").value;
+//     var password = document.getElementById("password").value;
+//     if (username == "Admin" && password == "Password#123") {
+//         window.location = "dashboard.html"; // Redirecting to other page.
+//         return true;
+//     } else {
+//         attempt--; // Decrementing by one.
+//         alert("You have left " + attempt + " attempt;");
+//         // Disabling fields after 3 attempts.
+//         if (attempt == 0) {
+//             document.getElementById("username").disabled = true;
+//             document.getElementById("password").disabled = true;
+//             document.getElementById("submit").disabled = true;
+//             return false;
+//         }
+//     }
+// }
+
+
+
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Get the entered username and password
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
-    if (username == "Admin" && password == "Password#123") {
-        window.location = "index.html"; // Redirecting to other page.
-        return false;
+
+    // Your authentication logic goes here
+    // For demonstration purposes, let's assume authentication is successful
+    var isAuthenticated = true; // Change this based on your authentication logic
+
+    if (isAuthenticated) {
+        // Redirect to the dashboard page upon successful login
+        window.location.href = "dashboard.html";
     } else {
-        attempt--; // Decrementing by one.
-        alert("You have left " + attempt + " attempt;");
-        // Disabling fields after 3 attempts.
-        if (attempt == 0) {
-            document.getElementById("username").disabled = true;
-            document.getElementById("password").disabled = true;
-            document.getElementById("submit").disabled = true;
-            return false;
-        }
+        // Display an error message if authentication fails
+        alert("Invalid username or password. Please try again.");
     }
-}
+});
+
+
+
+
+
+
 
 //sitter management
 $(document).ready(function() {
@@ -65,3 +93,5 @@ $(document).ready(function() {
     // xhr.send(JSON.stringify(formData));
 });
 });
+
+ 

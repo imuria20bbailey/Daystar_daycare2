@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="assets/bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/fontawesome-free-5.15.4-web/css/all.css">
     <link rel="stylesheet" href="style.css">
-    <title>Sitter Management</title>
+    <title>Daily Management</title>
 </head>
 <body>
     <div class="container-fluid">
         <div class="row flex-nowrap">
-            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0" style="background-image: linear-gradient(to bottom right, rgb(63, 10, 3), rgb(33, 2, 39))">
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0" style="background-color: #00246B; ">
                 <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
                     <div style="border-bottom: 2px solid #fff; margin-bottom: 20px;">
                         <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
@@ -61,21 +61,21 @@
                             <!-- <li>
                                 <hr class="dropdown-divider">
                             </li> -->
-                            <li><a class="dropdown-item" href="login.html">Sign out</a></li>
+                            <li><a class="dropdown-item" href="/loginform.html">Sign out</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="col py-3 mt-5">
                 <div>
-                    <h4><b>Sitter Management</b></h4>
+                    <h4><b>Daily Management</b></h4>
                 </div>
                 <div class="card-body">
                     <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
                         <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalToggleLabel">Sitter Registration</h5>
+                                    <h5 class="modal-title" id="exampleModalToggleLabel">Daily Task</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
@@ -85,26 +85,26 @@
                                             <input type="text" class="form-control" id="exampleFormControlInput1">
                                         </div>
                                         <div class="col-12 mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label">Phone Number</label>
+                                            <label for="exampleFormControlInput1" class="form-label">Period of stay</label>
                                             <input type="text" class="form-control" id="exampleFormControlInput1">
                                         </div>
                                         <div class="col-12 mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label">Period of Stay</label>
+                                            <label for="exampleFormControlInput1" class="form-label">Sitters number</label>
                                             <input type="text" class="form-control" id="exampleFormControlInput1">
                                         </div>
                                         <div class="col-12 mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label">Assign Sitter</label>
+                                            <label for="exampleFormControlInput1" class="form-label">Assigned Sitter</label>
                                             <input type="text" class="form-control" id="exampleFormControlInput1">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button class="btn btn-success" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Register Sitter</button>
+                                    <button class="btn btn-success" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Submit</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <a class="btn btn-warning mt-4 mb-4" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Register a Sitter</a>
+                    <a class="btn btn-warning mt-4 mb-4" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Daily Records</a>
 
                     <div class="row">
                         <div class="col-12 mb-3">
@@ -113,25 +113,25 @@
                                     <tr>
                                         <th scope="col">#</th>
                                         <th scope="col">Baby Name</th>
-                                        <th scope="col">Phone Number</th>
-                                        <th scope="col">Period of Stay</th>
+                                        <th scope="col">Period of stay</th>
+                                        <th scope="col">Sitters number</th>
                                         <th scope="col">Assigned Sitter</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <th scope="row">1</th>
-                                        <td>Baby One</td>
+                                        <td>Jonathan N</td>
+                                        <td>full day</td>
                                         <td>+256700000002</td>
-                                        <td>Half Day</td>
-                                        <td>Jane Doe</td>
+                                        <td>Joan k</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">1</th>
-                                        <td>Baby Two</td>
-                                        <td>+256700000042</td>
-                                        <td>Full Day</td>
-                                        <td>John Doe</td>
+                                        <th scope="row">2</th>
+                                        <td>Kyline T</td>
+                                        <td>half day</td>
+                                        <td>+256700000002</td>
+                                        <td>Mercy M</td>
                                     </tr>
                                 </tbody>
                             </table>
