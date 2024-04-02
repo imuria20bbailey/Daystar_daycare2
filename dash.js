@@ -1,97 +1,147 @@
-// function validate() {
-//     var username = document.getElementById("username").value;
-//     var password = document.getElementById("password").value;
-//     if (username == "Admin" && password == "Password#123") {
-//         window.location = "dashboard.html"; // Redirecting to other page.
-//         return true;
-//     } else {
-//         attempt--; // Decrementing by one.
-//         alert("You have left " + attempt + " attempt;");
-//         // Disabling fields after 3 attempts.
-//         if (attempt == 0) {
-//             document.getElementById("username").disabled = true;
-//             document.getElementById("password").disabled = true;
-//             document.getElementById("submit").disabled = true;
-//             return false;
-//         }
-//     }
-// }
+// import {babyDummyData} from "./js/babiesdata.js"; // Corrected import path
 
+// const babyList = document.getElementById('babies-list');
 
-
-document.getElementById("loginForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent the default form submission
-
-    // Get the entered username and password
-    var username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
-
-    // Your authentication logic goes here
-    // For demonstration purposes, let's assume authentication is successful
-    var isAuthenticated = true; // Change this based on your authentication logic
-
-    if (isAuthenticated) {
-        // Redirect to the dashboard page upon successful login
-        window.location.href = "dashboard.html";
-    } else {
-        // Display an error message if authentication fails
-        alert("Invalid username or password. Please try again.");
-    }
-});
-
-
-
-
-
-
-
-//sitter management
-$(document).ready(function() {
      
-    // INPUT KEY
-    $('input.numbers').keyup(function(event) {
-        if(event.which >= 37 && event.which <= 40) return;
-        $(this).val(function(index, value) {
-            return value
-            .replace(/\D/g, "")
-            .replace(/\B(?=(\d{3})+(?!\d))/g, "");
+//     babyDummyData.babies.forEach(baby =>{
+//            const babyDataLi = document.createElement('tbody');
+//             babyDataLi.innerHTML = `
+//             <h5>B.Name: ${baby.name}</h5>
+//             <p>Gender: ${baby.gender}</p>
+//             <p>Age: ${baby.age}</p>
+//             <p>Location: ${baby.location}</p>
+//             <p>Person who brought the baby: ${baby.personbroughtBy}</p>
+//             <p>Time of arrival: ${baby.timeofArrival}</p>
+//             <p>Parents Names: ${baby.parentsName}</p>
+//             <p>Fees in Ugx: ${baby.feesInUgx}</p>
+//             <p>Period of stay: ${baby.periodOfStay}</p>
+//             <p>Baby Number: ${baby.babyNumber}</p>
+//             `;
+//             // Append baby data to the babyList
+//             babyList.appendChild(babyDataLi);
+//         });
+    
+const userForm = document.getElementById('userForm');
+
+    // Function to handle form submission
+    userForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Get form values
+        const name = document.getElementById('name').value;
+        const gender = document.getElementById('gender').value;
+        const age = document.getElementById('age').value;
+        const location = document.getElementById('location').value;
+        const nameOfPerson = document.getElementById('nameOfPerson ').value;
+        const timeOfArrival = document.getElementById('timeOfArrival').value;
+        const parentsName = document.getElementById('parentsName').value;
+        const fees = document.getElementById('fees').value;
+        const periodOfStay = document.getElementById('periodOfStay').value;
+        const babyNumber = document.getElementById('babyNumber').value; 
+
+        // Create user object
+        const newUser = {
+            name: name,
+            gender: gender,
+            age: age,
+            location:location,
+            nameOfPerson: nameOfPerson,
+            timeOfArrival:timeOfArrival,
+            parentsName: parentsName,
+            fees:fees,
+            periodOfStay:periodOfStay,
+            babyNumber:babyNumber
+        };
+
+        let users = JSON.parse(localStorage.getItem('users')) || [];
+
+        // Add new user to the list
+        users.push(newUser);
+        console.log(newUser);
+
+        // Store updated users list in localStorage
+        localStorage.setItem('users', JSON.stringify(users));
+
+        
+        // Redirect to display page
+        //window.location.href = "baby-registration.html";
+    });
+
+
+    
+ // Function to delete user entry
+    function deleteUser(index) {
+        // Retrieve users data from localStorage
+        let users = JSON.parse(localStorage.getItem('users')) || [];
+
+        // Remove user entry from localStorage
+        users.splice(index, 1);
+        localStorage.setItem('users', JSON.stringify(users));
+// Remove user entry from the page
+        const userContainer = document.getElementById('userContainer');
+        userContainer.removeChild(userContainer.childNodes[index]);
+// Update indices of user entries after deletion
+        const userInfos = document.querySelectorAll('.user-info');
+        userInfos.forEach((userInfo, i) => {
+            userInfo.querySelector('button.delete').setAttribute('onclick', `deleteUser(${i})`);
+            userInfo.querySelector('button.edit').setAttribute('onclick', `editUser(${i})`);
         });
+
+
+}
+
+    // Function to edit user entry
+    function editUser(index) {
+        console.log("Edit user with index", index);
+    }
+
+
+    // Retrieve users data from localStorage
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+    const userContainer = document.getElementById('userContainer');
+
+
+    // Display user information
+    users.forEach((user, index) => {
+        const userInfo = document.createElement('tbody');
+        userInfo.userContainer.add('user-info');
+        userInfo.innerHTML = `
+            <p><strong>Name:</strong> ${user.name}</p>
+            <p><strong>Gender:</strong> ${user.gender}</p>
+            <p><strong>Age:</strong> ${user.age}</p>
+            <p><strong>Location:</strong> ${user.location}</p>
+            <p><strong>Name of Person:</strong> ${user.nameOfPerson}</p>
+            <p><strong>Time of Arrival:</strong> ${user.timeOfArrival}</p>
+            <p><strong>Parents Name:</strong> ${user.parentsName}</p>
+            <p><strong>Fees:</strong> ${user.fees}</p>
+            <p><strong>Period of stay:</strong> ${user.periodOfStay}</p>
+            <p><strong>Baby name:</strong> ${user.babyNumber}</p>
+            <button class="edit" onclick="editUser(${index})">Edit</button>
+            <button class="delete" onclick="deleteUser(${index})">Delete</button>
+        `;
+        userContainer.appendChild(userInfo);
     });
 
 
 
-    document.getElementById("register-sitter-form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent default form submission
 
-    // Retrieve form data
-    var formData = {
-        name: document.getElementById("name").value,
-        location: document.getElementById("location").value,
-        dob: document.getElementById("date-of_birth").value,
-        nextOfKin: document.getElementById("next_of_kin").value,
-        nin: document.getElementById("nin").value,
-        recommenderName: document.getElementById("name_of_recommender").value,
-        religion: document.getElementById("religion").value,
-        educationLevel: document.getElementById("level_of_education").value,
-        phoneNumber: document.getElementById("phoneNumber").value
-    };
 
-    // Send form data to backend
-    // var xhr = new XMLHttpRequest();
-    // xhr.open("POST", "/register-sitter", true); // Assuming your registration endpoint is '/users/register'
-    // xhr.setRequestHeader("Content-Type", "application/json");
-    // xhr.onreadystatechange = function() {
-    //     if (xhr.readyState === 4) {
-    //         if (xhr.status === 201) {
-    //             alert("User registered successfully");
-    //             // Clear form fields or do any additional actions
-    //         } else {
-    //             alert("Error: " + xhr.statusText);
-    //         }
-    //     }
-    // };
-    // xhr.send(JSON.stringify(formData));
-});
-});
 
- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
